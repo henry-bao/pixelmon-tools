@@ -1,1 +1,1 @@
-# pixelmon-calc
+# Pixelmon Legendary Calculator
