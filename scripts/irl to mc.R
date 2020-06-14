@@ -7,17 +7,9 @@ irl_mc <- function(hour, min, sec, mc_hr, mc_min) {
   
   ##test if converted hour has digits, if yes then convert the digits into
   ##minutes and get rid of the digits
-  if (is.integer(final_mc_hour) == FALSE &&
-      final_mc_hour > round(final_mc_hour, digits = 0)) {
-    extra_mc_hour <- sum(final_mc_hour - round(final_mc_hour, digits = 0))
-    final_mc_hour <- round(final_mc_hour, digits = 0)
-    get_extra_min <- extra_mc_hour * 60
-    final_mc_min <- final_mc_min + get_extra_min
-    
-  } else if (is.integer(final_mc_hour) == FALSE &&
-             final_mc_hour < round(final_mc_hour, digits = 0)) {
-    extra_mc_hour <- 1 - sum(round(final_mc_hour, digits = 0) - final_mc_hour)
-    final_mc_hour <- final_mc_hour - extra_mc_hour
+  if (is.integer(final_mc_hour) == FALSE) {
+    extra_mc_hour <- sum(final_mc_hour - as.integer(final_mc_hour))
+    final_mc_hour <- as.integer(final_mc_hour)
     get_extra_min <- extra_mc_hour * 60
     final_mc_min <- final_mc_min + get_extra_min
     ##else keep final converted hour
@@ -91,4 +83,4 @@ irl_mc <- function(hour, min, sec, mc_hr, mc_min) {
 
 
 # Test
-irl_mc(0,2,45,23,25)
+irl_mc(0,3,0,0,0)
