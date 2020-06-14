@@ -1,6 +1,6 @@
 library(dplyr)
 
-df <- read.csv("lgnd_info.csv", stringsAsFactors = FALSE)
+df <- read.csv("../data/lgnd_info.csv", stringsAsFactors = FALSE)
 
 # group by spawn time
 dawn_dusk <- df %>% 

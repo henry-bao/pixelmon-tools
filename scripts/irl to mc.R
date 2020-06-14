@@ -1,3 +1,6 @@
+# install.packages("datetime")
+# library("datetime")
+
 # Time calc
 irl_mc <- function(hour, min, sec, mc_hr, mc_min) {
   ##convert irl min/sec to mc hour/min
@@ -75,6 +78,10 @@ irl_mc <- function(hour, min, sec, mc_hr, mc_min) {
     next_hr
   }
   
+  # ##TEST CODE
+  # next_time <- paste0(next_hr, ":", next_min)
+  # get_next_time <- as.time(next_time)
+  # if (next_hr = 4 )
   
   ##return calculated values
   return(paste("[", next_hr,":",
@@ -82,5 +89,6 @@ irl_mc <- function(hour, min, sec, mc_hr, mc_min) {
 }
 
 
-# Test
-irl_mc(0,3,0,0,0)
+# # Test
+# irl_mc(0,3,0,0,0)
+# seq(from = as.time("1:2"), to = as.time("1:22"))
