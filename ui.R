@@ -6,6 +6,7 @@ first_page <- tabPanel(
   "Spawn time calculator",
   sidebarLayout(
     sidebarPanel(
+      width = 4,
       h2(span("Next spawn informations"), style = "color: grey"),
       numericInput(
         inputId = "hour",
