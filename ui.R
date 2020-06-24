@@ -12,33 +12,41 @@ first_page <- tabPanel(
     sidebarPanel(
       width = 4,
       h2(span("Next spawn informations"), style = "color: grey"),
+      div(style="display: inline-block;vertical-align:top; width: 100px;",
       numericInput(
         inputId = "hour",
         label = h4("Next spawn hour:"),
         value = 0
-      ),
+      )),
+      div(style="display: inline-block;vertical-align:top; width: 5px;"),
+      div(style="display: inline-block;vertical-align:top; width: 100px;",
       numericInput(
         inputId = "min",
         label = h4("Next spawn minute:"),
         value = 0
-      ),
+      )),
+      div(style="display: inline-block;vertical-align:top; width: 5px;"),
+      div(style="display: inline-block;vertical-align:top; width: 100px;",
       numericInput(
         inputId = "sec",
         label = h4("Next spawn second:"),
         value = 0
-      ),
+      )),
       h2(span("Current Minecraft time"), style = "color: grey"),
+      div(style="display: inline-block;vertical-align:top; width: 100px;",
       numericInput(
         inputId = "mc_hr",
-        label = h4("Current Minecraft hour (0-23):"),
+        label = h4("Hour (0-23):"),
         value = 0
-      ),
+      )),
+      div(style="display: inline-block;vertical-align:top; width: 5px;"),
+      div(style="display: inline-block;vertical-align:top; width: 100px;",
       numericInput(
         inputId = "mc_min",
-        label = h4("Current Minecraft minute:"),
+        label = h4("Minute:"),
         value = 0
       )
-    ),
+    )),
     mainPanel(
       width = 7,
       h2("The next spawn time is:"),
