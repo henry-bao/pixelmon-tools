@@ -1,5 +1,9 @@
 # Load libraries
+library("shiny")
 library("shinythemes")
+
+# Load data frame
+df <- read.csv("data/lgnd_info.csv", stringsAsFactors = FALSE)
 
 # First page
 first_page <- tabPanel(
@@ -51,9 +55,30 @@ first_page <- tabPanel(
   )
 )
 
+# Second page
+second_page <- tabPanel(
+  "Legend spawn search",
+  sidebarLayout(
+    sidebarPanel(
+      width = 4,
+      selectInput("time", h4("Select a spawn time"),
+                  choices = unique(df$Spawn.times)),
+      tags$img(
+        src = "time.png",
+        width = "100%"
+      )
+    ),
+    mainPanel(
+      width = 7,
+      tableOutput("table")
+    )
+  )
+)
+
 # Define ui
 ui <- navbarPage(
-  "Pixelmon Time Calulator",
-  theme = shinytheme("journal"),
-  first_page
+  "Pixelmon Tools",
+  theme = shinytheme("united"),
+  first_page,
+  second_page
 )

@@ -1,4 +1,4 @@
-Pok?mon,Biomes,Spawn.times,Spawn.location
+Pokemon,Biomes,Spawn.times,Spawn.location
 Articuno,"Cold Taiga, Ice Mountains, Ice Plains, Ice Plains Spikes",Any,Frozen Shrine
 Zapdos,"Savanna Plateau, Savanna M, Savanna Plateau M",Any,Static Shrine
 Moltres,"Mesa Plateau, Mesa Plateau F, Mesa Plateau F M, Mesa Plateau M",Any,Fiery Shrine
@@ -10,7 +10,7 @@ Suicune,Beaches,Night,Land
 Lugia,Any,Dusk,Tidal Bell
 Ho-Oh,Any,Dusk,Clear Bell
 Celebi,Forest,Any,"The Ilex Shrine is a shrine that spawns rarely in the Forest biome. The shrine is used in order to spawn the Legendary Celebi or special textures Celebi.
-Right clicking on the Ilex Shrine with the respective type of Pok? Balls will spawn the Pok?mon and initiate the battle.
+Right clicking on the Ilex Shrine with the respective type of PokeBalls will spawn the Pokemon and initiate the battle.
 
 GS Ball: Celebi
 Beast Ball: special textures Celebi"
@@ -73,3 +73,6 @@ Marshadow,Mesa Plateau F M,Night,Land
 Zeraora,Savanna Plateau M,Afternoon,Land
 Meltan,Any,Any,Smelting Metal Ores
 Melmetal,Does Not Spawn,None,Evolves from Meltan
+Zacian,Forest,Day,Land
+Zamazenta,Forest,Night,Land
+Eternatus,"End, Swamps",Dawn/Dusk,Land

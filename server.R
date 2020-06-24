@@ -1,5 +1,12 @@
+# Load libraries
+library("shiny")
+library("dplyr")
+
 # Load scripts
 source("scripts/irl to mc.R")
+
+# Load data frame
+df <- read.csv("data/lgnd_info.csv", stringsAsFactors = FALSE)
 
 # Define server
 server <- function(input, output) {
@@ -14,4 +21,9 @@ server <- function(input, output) {
      )
      irl_mc(input$hour, input$min, input$sec, input$mc_hr, input$mc_min)
   })
+   
+   output$table <- renderTable({
+      filtered_table <- df %>% 
+         filter(Spawn.times == input$time)
+   })
 }
