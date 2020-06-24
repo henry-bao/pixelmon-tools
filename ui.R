@@ -99,8 +99,11 @@ third_page <- tabPanel(
 
 # Define ui
 ui <- navbarPage(
-  "Pixelmon Tools",
   theme = shinytheme("united"),
+  div(tags$img(src = "icon.png",
+               style = "margin-top: -14px; padding-right:10px;padding-bottom:10px",
+               height = 60)),
+  windowTitle = strong("Pixelmon Tools"),
   first_page,
   second_page,
   third_page
