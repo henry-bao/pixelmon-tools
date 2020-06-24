@@ -11,32 +11,32 @@ first_page <- tabPanel(
   sidebarLayout(
     sidebarPanel(
       width = 4,
-      h2(span("Next spawn informations"), style = "color: grey"),
-      div(style="display: inline-block;vertical-align:top; width: 100px;",
+      h2(span("Time until next legend spawn"), style = "color: grey"),
+      div(style="display: inline-block;vertical-align:top; width: 70px;",
       numericInput(
         inputId = "hour",
-        label = h4("Next spawn hour:"),
+        label = h4("Hour:"),
         value = 0
       )),
       div(style="display: inline-block;vertical-align:top; width: 5px;"),
-      div(style="display: inline-block;vertical-align:top; width: 100px;",
+      div(style="display: inline-block;vertical-align:top; width: 70px;",
       numericInput(
         inputId = "min",
-        label = h4("Next spawn minute:"),
+        label = h4("Minute:"),
         value = 0
       )),
       div(style="display: inline-block;vertical-align:top; width: 5px;"),
-      div(style="display: inline-block;vertical-align:top; width: 100px;",
+      div(style="display: inline-block;vertical-align:top; width: 70px;",
       numericInput(
         inputId = "sec",
-        label = h4("Next spawn second:"),
+        label = h4("Second:"),
         value = 0
       )),
       h2(span("Current Minecraft time"), style = "color: grey"),
       div(style="display: inline-block;vertical-align:top; width: 100px;",
       numericInput(
         inputId = "mc_hr",
-        label = h4("Hour (0-23):"),
+        label = h4("Hour(0-23):"),
         value = 0
       )),
       div(style="display: inline-block;vertical-align:top; width: 5px;"),
