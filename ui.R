@@ -48,7 +48,7 @@ first_page <- tabPanel(
         from IRL to Minecraft"),
       tags$img(
         src = "time.png",
-        width = "60%"
+        width = "50%"
       ),
       p(" ")
     )
