@@ -56,7 +56,7 @@ first_page <- tabPanel(
         from IRL to Minecraft"),
       tags$img(
         src = "time.png",
-        width = "50%"
+        width = "60%"
       ),
       p(" ")
     )
@@ -70,7 +70,8 @@ second_page <- tabPanel(
     sidebarPanel(
       width = 4,
       selectInput("time", h4("Select a spawn time"),
-                  choices = unique(df$Spawn.times)),
+                  choices = c("No time selected",unique(df$Spawn.times)),
+                  selected = "No time selected"),
       p(" "),
       tags$img(
         src = "time.png",
@@ -91,7 +92,8 @@ third_page <- tabPanel(
     sidebarPanel(
       width = 4,
       selectInput("name", h4("Select a legendary Pokemon name"),
-                  choices = unique(df$Pokemon)),
+                  choices = c("No name selected",unique(df$Pokemon)),
+                  selected = "No name selected"),
       p(" "),
       tags$img(
         src = "sunglass.jpg",
