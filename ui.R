@@ -57,12 +57,13 @@ first_page <- tabPanel(
 
 # Second page
 second_page <- tabPanel(
-  "Legend spawn search",
+  "Legend spawn search by time",
   sidebarLayout(
     sidebarPanel(
       width = 4,
       selectInput("time", h4("Select a spawn time"),
                   choices = unique(df$Spawn.times)),
+      p(" "),
       tags$img(
         src = "time.png",
         width = "100%"
@@ -70,7 +71,28 @@ second_page <- tabPanel(
     ),
     mainPanel(
       width = 7,
-      tableOutput("table")
+      tableOutput("table1")
+    )
+  )
+)
+
+# Third page
+third_page <- tabPanel(
+  "Legend spawn search by name",
+  sidebarLayout(
+    sidebarPanel(
+      width = 4,
+      selectInput("name", h4("Select a legendary Pokemon name"),
+                  choices = unique(df$Pokemon)),
+      p(" "),
+      tags$img(
+        src = "sunglass.jpg",
+        width = "100%"
+      )
+    ),
+    mainPanel(
+      width = 7,
+      tableOutput("table2")
     )
   )
 )
@@ -80,5 +102,6 @@ ui <- navbarPage(
   "Pixelmon Tools",
   theme = shinytheme("united"),
   first_page,
-  second_page
+  second_page,
+  third_page
 )

@@ -22,8 +22,13 @@ server <- function(input, output) {
      irl_mc(input$hour, input$min, input$sec, input$mc_hr, input$mc_min)
   })
    
-   output$table <- renderTable({
+   output$table1 <- renderTable({
       filtered_table <- df %>% 
          filter(Spawn.times == input$time)
+   })
+   
+   output$table2 <- renderTable({
+      filtered_table <- df %>% 
+         filter(Pokemon == input$name)
    })
 }
