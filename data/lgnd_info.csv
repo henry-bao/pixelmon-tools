@@ -1,7 +1,15 @@
 Pokemon,Biomes,Spawn.times,Spawn.location
-Articuno,"Cold Taiga, Ice Mountains, Ice Plains, Ice Plains Spikes",Any,Frozen Shrine
-Zapdos,"Savanna Plateau, Savanna M, Savanna Plateau M",Any,Static Shrine
-Moltres,"Mesa Plateau, Mesa Plateau F, Mesa Plateau F M, Mesa Plateau M",Any,Fiery Shrine
+Articuno,"Cold Taiga, 
+Ice Mountains,
+Ice Plains,
+Ice Plains Spikes",Any,Frozen Shrine
+Zapdos,"Savanna Plateau,
+Savanna M,
+Savanna Plateau M",Any,Static Shrine
+Moltres,"Mesa Plateau, 
+Mesa Plateau F, 
+Mesa Plateau F M, 
+Mesa Plateau M",Any,Fiery Shrine
 Mewtwo,Any,Any,Cloning Machine
 Mew,Jungle M,Day,Land
 Raikou,Savannas,Dawn/Dusk,Land
@@ -22,26 +30,61 @@ Latios,Ocean,Afternoon,Air
 Kyogre,Deep Ocean in Rainy Weather Boosted Rarity in Storm,Night,Water y=45
 Groudon,Desert Hills in Clear Weather,Day,Land
 Rayquaza,Mountainous,Dawn/Dusk,Air
-Jirachi,Extreme Hills+ M,Dawn/Dusk,Land
+Jirachi,Extreme Hills Plus M,Dawn/Dusk,Land
 Deoxys,"End, Cold Taiga M",Morning,Land
 Uxie,Roofed Forest,Afternoon,Surface Water
 Mesprit,Birch Forest,Dawn/Dusk,Surface Water
 Azelf,Forest,Morning,Surface Water
-Dialga,"Ice Mountains, Extreme Hills Edge, Extreme Hills+, Extreme Hills+ M, Extreme Hills",Any,Timespace Altar
-Palkia,"Ice Mountains, Extreme Hills Edge, Extreme Hills+, Extreme Hills+ M, Extreme Hills",Any,Timespace Altar
-Heatran,"Mesas, Hell",Any,Underground y=50 near Lava
+Dialga,"Ice Mountains, 
+Extreme Hills Edge, 
+Extreme Hills+, 
+Extreme Hills Plus M, 
+Extreme Hills",Any,Timespace Altar
+Palkia,"Ice Mountains, 
+Extreme Hills Edge, 
+Extreme Hills+, 
+Extreme Hills Plus M, 
+Extreme Hills",Any,Timespace Altar
+Heatran,"Mesas, 
+Hell",Any,Underground y=50 near Lava
 Regigigas,Savannas,Dawn/Dusk,Underground y=40
-Giratina,"Ice Mountains, Extreme Hills Edge, Extreme Hills+, Extreme Hills+ M, Extreme Hills",Any,Timespace Altar
+Giratina,"Ice Mountains, 
+Extreme Hills Edge, 
+Extreme Hills+, 
+Extreme Hills Plus M, 
+Extreme Hills",Any,Timespace Altar
 Cresselia,Birch Forest M,Night - Moon Phase 0 (Full Moon),Land
 Manaphy,Oceanic in Clear Weather,Morning,Water
 Phione,None,None,Hatch from Egg by breeding Manaphy
 Darkrai,Roofed Forest M,Night - Moon Phase 4 (New Moon),Land
 Shaymin,Flower Forest,Morning,Land
-Arceus,"Ice Mountains, Extreme Hills Edge, Extreme Hills+, Extreme Hills+ M, Extreme Hills",Any,Timespace Altar
+Arceus,"Ice Mountains, 
+Extreme Hills Edge, 
+Extreme Hills+,
+Extreme Hills Plus M, 
+Extreme Hills",Any,Timespace Altar
 Victini,Savannas in Clear Weather,Day,Land
-Cobalion,"Forest Hills, Birch Forest Hills, Autumnal Wooded Hills, Forested Hills, Birch Forested Hills, Lush Hills, Silver Birch Hills",Night,Land
-Terrakion,"Forest Hills, Birch Forest Hills, Autumnal Wooded Hills, Forested Hills, Birch Forested Hills, Lush Hills, Silver Birch Hills",Night,Land
-Virizion,"Forest Hills, Birch Forest Hills, Autumnal Wooded Hills, Forested Hills, Birch Forested Hills, Lush Hills, Silver Birch Hills",Day,Land
+Cobalion,"Forest Hills, 
+Birch Forest Hills, 
+Autumnal Wooded Hills, 
+Forested Hills, 
+Birch Forested Hills, 
+Lush Hills, 
+Silver Birch Hills",Night,Land
+Terrakion,"Forest Hills, 
+Birch Forest Hills, 
+Autumnal Wooded Hills, 
+Forested Hills, 
+Birch Forested Hills, 
+Lush Hills, 
+Silver Birch Hills",Night,Land
+Virizion,"Forest Hills, 
+Birch Forest Hills, 
+Autumnal Wooded Hills, 
+Forested Hills, 
+Birch Forested Hills, 
+Lush Hills, 
+Silver Birch Hills",Day,Land
 Tornadus,"Plains, Boosted Rarity in Storm",Afternoon,Air
 Thundurus,"Plains, Boosted Rarity in Storm",Morning,Air
 Landorus,Mesa Plateau F M,Dawn/Dusk,Air
@@ -56,7 +99,9 @@ Yveltal,Taiga M,Night,Air
 Zygarde,Any,Any,Reassembly Unit
 Hoopa,"End, Arid",Afternoon,Land
 Diancie,Mountainous,Morning,Underground y=50
-Volcanion,"Hell, Desert M, Volcanic Island",Dawn/Dusk,Land
+Volcanion,"Hell, 
+Desert M, 
+Volcanic Island",Dawn/Dusk,Land
 Type: Null,Jungle Edge,Dawn/Dusk,Land
 Silvally,Does Not Spawn,None,Evolves from Type: Null
 Tapu Koko,Jungle,Morning,Land
@@ -75,4 +120,5 @@ Meltan,Any,Any,Smelting Metal Ores
 Melmetal,Does Not Spawn,None,Evolves from Meltan
 Zacian,Forest,Day,Land
 Zamazenta,Forest,Night,Land
-Eternatus,"End, Swamps",Dawn/Dusk,Land
+Eternatus,"End, 
+Swamps",Dawn/Dusk,Land

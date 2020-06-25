@@ -65,13 +65,16 @@ first_page <- tabPanel(
 
 # Second page
 second_page <- tabPanel(
-  "Legend spawn search by time",
+  "Search legend spawns by conditions",
   sidebarLayout(
     sidebarPanel(
       width = 4,
-      selectInput("time", h4("Select a spawn time"),
+      selectInput("time", "Select a spawn time",
                   choices = c("No time selected",unique(df$Spawn.times)),
                   selected = "No time selected"),
+      selectInput("biome", "Select a spawn biome",
+                  choices = ""
+                  ),
       p(" "),
       tags$img(
         src = "time.png",
@@ -87,11 +90,11 @@ second_page <- tabPanel(
 
 # Third page
 third_page <- tabPanel(
-  "Legend spawn search by name",
+  "Search legend spawns by name",
   sidebarLayout(
     sidebarPanel(
       width = 4,
-      selectInput("name", h4("Select a legendary Pokemon name"),
+      selectInput("name", "Select a legendary Pokemon name",
                   choices = c("No name selected",unique(df$Pokemon)),
                   selected = "No name selected"),
       p(" "),
