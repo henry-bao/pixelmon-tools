@@ -72,15 +72,15 @@ second_page <- tabPanel(
   sidebarLayout(
     sidebarPanel(
       width = 4,
-      span(h4("To search for a legend spawn by conditions simply select the
-              desired time then choose a biome accordingly."),
-           style = "color : gray"),
       selectInput("time", "Select a spawn time",
                   choices = c("No time selected",unique(df$Spawn.times)),
                   selected = "No time selected"),
       selectInput("biome", "Select a spawn biome",
                   choices = ""
                   ),
+      span(p("To search for a legend spawn by conditions simply select the
+              desired time then choose a biome accordingly."),
+           style = "color : gray"),
     ),
     mainPanel(
       width = 7,
