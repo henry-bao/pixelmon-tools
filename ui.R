@@ -153,7 +153,10 @@ how_to <- tabPanel(
              "Legendary Pokemon"),
       p(" "),
       tags$a(href="https://pixelmonmod.com/wiki/Spawn_time",
-             "Pixelmon spawn times")
+             "Pixelmon spawn times"),
+      p(" "),
+      h2("This website is made by"),
+      p(strong("Discord"), ":", "Hackel#1337")
     )
   )
 )
