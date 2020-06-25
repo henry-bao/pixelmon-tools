@@ -54,6 +54,9 @@ first_page <- tabPanel(
       p("Disclaimer: The calculated spawn time should only be used as a
         reference, calculations might not be accurate due to time conversions
         from IRL to Minecraft"),
+      p(" "),
+      h3("Time conversion table"),
+      p(" "),
       tags$img(
         src = "time.png",
         width = "60%"
@@ -69,17 +72,15 @@ second_page <- tabPanel(
   sidebarLayout(
     sidebarPanel(
       width = 4,
+      span(h4("To search for a legend spawn by conditions simply select the
+              desired time then choose a biome accordingly."),
+           style = "color : gray"),
       selectInput("time", "Select a spawn time",
                   choices = c("No time selected",unique(df$Spawn.times)),
                   selected = "No time selected"),
       selectInput("biome", "Select a spawn biome",
                   choices = ""
                   ),
-      p(" "),
-      tags$img(
-        src = "time.png",
-        width = "100%"
-      )
     ),
     mainPanel(
       width = 7,
@@ -110,6 +111,54 @@ third_page <- tabPanel(
   )
 )
 
+# How to
+how_to <- tabPanel(
+  "How to use" ,
+  sidebarLayout(
+    sidebarPanel(
+      width = 3,
+      h3("Mods needed"),
+      strong("Journey Map"),
+      p(" "),
+      actionButton(inputId = "ab2",
+                   label = "Download",
+                   class = "btn-primary",
+                   onclick = "window.open('https://www.curseforge.com/minecraft/mc-mods/journeymap/files', '_blank')"),
+      p(" "),
+      span(strong("OR"), style = "color: grey"),
+      p(" "),
+      strong("Time HUD"),
+      p(" "),
+      actionButton(inputId = "ab2",
+                   label = "Download",
+                   class = "btn-primary",
+                   onclick = "window.open('https://www.curseforge.com/minecraft/mc-mods/time-hud/files', '_blank')"),
+    ),
+    mainPanel(
+      h2("How to use the time calculator"),
+      h4("For Journey Map:"),
+      p("Make sure you have", strong("Game Time Real"), "as one of the options
+        for your map, and use that time to calculate next
+        legend spawn."),
+      p(" "),
+      h4("For Time HUD:"),
+      p("Make sure your Time HUD format is on", strong("24 hour interval"),"if
+        it isn't go to mod config in settings to change it."),
+      p(" "),
+      h2("More informations"),
+      p("You can get more informations about legend spawns from the",
+         tags$a(href="https://pixelmonmod.com/wiki/", "Pixelmon Wiki"),
+        "website."),
+      h4("Some useful links:"),
+      tags$a(href="https://pixelmonmod.com/wiki/Legendary_Pokemon/",
+             "Legendary Pokemon"),
+      p(" "),
+      tags$a(href="https://pixelmonmod.com/wiki/Spawn_time",
+             "Pixelmon spawn times")
+    )
+  )
+)
+
 # Define ui
 ui <- navbarPage(
   theme = shinytheme("united"),
@@ -119,5 +168,6 @@ ui <- navbarPage(
   windowTitle = "Pixelmon Tools",
   first_page,
   second_page,
-  third_page
+  third_page,
+  how_to
 )

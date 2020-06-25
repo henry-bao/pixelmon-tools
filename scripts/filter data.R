@@ -19,3 +19,9 @@ one <- df %>%
   select(grepl("Jungle", Biomes))
 
 View(one)
+
+
+example <- c("a, b", "c", "d", "e, f", "g")
+df <- data.frame(example)
+df$example <- sub(",\\s*", ",\n", df$example)
+df
