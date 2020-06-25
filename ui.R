@@ -51,16 +51,15 @@ first_page <- tabPanel(
       width = 7,
       h2("The next spawn time is:"),
       h2(span(textOutput("result"), style = "color: black")),
-      p("Disclaimer: The calculated spawn time should only be used as a
-        reference, calculations might not be accurate due to time conversions
-        from IRL to Minecraft"),
-      p(" "),
-      h3("Time conversion table"),
-      p(" "),
+      p(""),
       tags$img(
         src = "time.png",
         width = "60%"
       ),
+      p(" "),
+      span(p("Disclaimer: The calculated spawn time should only be used as a
+        reference, calculations might not be accurate due to time conversions
+        from IRL to Minecraft"), style = "color:grey"),
       p(" ")
     )
   )
