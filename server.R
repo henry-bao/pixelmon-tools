@@ -10,7 +10,7 @@ df <- read.csv("data/lgnd_info.csv", stringsAsFactors = FALSE)
 
 # Define server
 server <- function(input, output, session) {
-   
+
    observeEvent(
       input$time, {
          if (input$time != "No time selected") {
@@ -19,19 +19,22 @@ server <- function(input, output, session) {
                                           unique(
                                              unlist(
                                                 strsplit(
-                                                   df$Biomes[df$Spawn.times == input$time],",\\s*")))
+                                                   df$Biomes[
+                                                      df$Spawn.times
+                                                      == input$time], ",\\s*")))
                               ),
                               selected = "No biome selected")
          } else {
             updateSelectInput(session, "biome", "Select a spawn biome",
                               choices = c("No biome selected",
-                                          unique(unlist(strsplit(df$Biomes, ",\\s*")))
+                                          unique(unlist(strsplit
+                                                        (df$Biomes, ",\\s*")))
                               ),
                               selected = "No biome selected")
       }
    })
 
-   output$result <- renderText ({
+   output$result <- renderText({
      validate(
        need(input$hour != "",
             "Enter the hour until next spawn, if there's none enter 0"),
@@ -46,20 +49,20 @@ server <- function(input, output, session) {
      )
      irl_mc(input$hour, input$min, input$sec, input$mc_hr, input$mc_min)
   })
-   
-   get_table1 <- function (input1, input2){
+
+   get_table1 <- function(input1, input2) {
       if (input1 == "No time selected" && input2 == "No biome selected") {
          df
       } else if (input2 == "No biome selected") {
-         filtered_table <- df %>% 
+         filtered_table <- df %>%
             filter(Spawn.times == input1)
          filtered_table
       } else if (input1 == "No time selected") {
-         filtered_table <- df %>% 
+         filtered_table <- df %>%
             filter(grepl(paste(input2), Biomes))
          filtered_table
       } else {
-         filtered_table <- df %>% 
+         filtered_table <- df %>%
             filter(Spawn.times == input1 & grepl(paste(input2), Biomes))
          filtered_table
       }
@@ -67,12 +70,12 @@ server <- function(input, output, session) {
    output$table1 <- renderTable({
       get_table1(input$time, input$biome)
    })
-   
-   get_table2 <- function (input){
+
+   get_table2 <- function(input) {
       if (input == "No name selected") {
          paste("Please select a legendary Pokemon name")
       } else {
-         filtered_table <- df %>% 
+         filtered_table <- df %>%
          filter(Pokemon == input)
          filtered_table
       }
