@@ -77,8 +77,8 @@ second_page <- tabPanel(
       selectInput("biome", "Select a spawn biome",
                   choices = ""
                   ),
-      span(p("To search for a legend spawn by conditions simply select the
-              desired time then choose a biome accordingly."),
+      span(p("You can search legend spawn by selecting the time and biome,
+             or just time or just biome"),
            style = "color : gray"),
     ),
     mainPanel(
@@ -111,12 +111,12 @@ third_page <- tabPanel(
 )
 
 # How to
-how_to <- tabPanel(
-  "How to use",
+about <- tabPanel(
+  "About",
   sidebarLayout(
     sidebarPanel(
       width = 3,
-      h3("Mods needed"),
+      h3("Mod needed"),
       strong("Journey Map"),
       p(" "),
       actionButton(inputId = "ab2",
@@ -156,7 +156,9 @@ how_to <- tabPanel(
              "Pixelmon spawn times"),
       p(" "),
       h2("This website is made by"),
-      p(strong("Discord"), ":", "Hackel#1337")
+      p(strong("Discord"), ":", "Hackel#1337"),
+      p(" "),
+      span(h6("Legendary table updated on 06/26/2020"), style = "color:grey")
     )
   )
 )
@@ -172,5 +174,5 @@ ui <- navbarPage(
   first_page,
   second_page,
   third_page,
-  how_to
+  about
 )
