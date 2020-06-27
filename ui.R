@@ -122,7 +122,7 @@ about <- tabPanel(
       actionButton(inputId = "ab2",
                    label = "Download",
                    class = "btn-primary",
-                   onclick = "window.open('https://www.curseforge.com/minecraft/mc-mods/journeymap/files', '_blank')"),
+                   onclick = "window.open('https://bit.ly/384GMSx', '_blank')"),
       p(" "),
       span(strong("OR"), style = "color: grey"),
       p(" "),
@@ -131,7 +131,7 @@ about <- tabPanel(
       actionButton(inputId = "ab2",
                    label = "Download",
                    class = "btn-primary",
-                   onclick = "window.open('https://www.curseforge.com/minecraft/mc-mods/time-hud/files', '_blank')"),
+                   onclick = "window.open('https://bit.ly/3i625aO', '_blank')"),
     ),
     mainPanel(
       h2("How to use the time calculator"),
