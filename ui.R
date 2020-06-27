@@ -164,15 +164,21 @@ about <- tabPanel(
 )
 
 # Define ui
-ui <- navbarPage(
-  theme = shinytheme("united"),
-  div(tags$img(src = "icon.png",
-               style =
-                "margin-top: -9px; padding-right:0px;padding-bottom:20px",
-               height = 60)),
-  windowTitle = "Pixelmon Tools",
-  first_page,
-  second_page,
-  third_page,
-  about
+ui <- tagList(
+  navbarPage(
+    windowTitle = "Pixelmon Tools",
+    theme = shinytheme("united"),
+    div(tags$img(src = "icon.png",
+                 style =
+                   "margin-top: -9px; padding-right:0px;padding-bottom:20px",
+                 height = 60)),
+    first_page,
+    second_page,
+    third_page,
+    about
+  ),
+  titlePanel(
+    title = tags$head(tags$link(rel = "icon",
+                                href = "icon.ico"))
+  )
 )
