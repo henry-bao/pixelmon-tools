@@ -67,7 +67,7 @@ first_page <- tabPanel(
 
 # Second page
 second_page <- tabPanel(
-  "Search legend spawns by conditions",
+  "Conditions",
   sidebarLayout(
     sidebarPanel(
       width = 4,
@@ -90,7 +90,7 @@ second_page <- tabPanel(
 
 # Third page
 third_page <- tabPanel(
-  "Search legend spawns by name",
+  "Name",
   sidebarLayout(
     sidebarPanel(
       width = 4,
@@ -108,6 +108,12 @@ third_page <- tabPanel(
       tableOutput("table2")
     )
   )
+)
+
+# Combine 2nd and 3rd page together
+combined_page <- tabPanel(
+  "Search legend spawns",
+  tabsetPanel(second_page, third_page)
 )
 
 # How to
@@ -220,8 +226,7 @@ ui <- tagList(
                    "margin-top: -9px; padding-right:0px;padding-bottom:20px",
                  height = 60)),
     first_page,
-    second_page,
-    third_page,
+    combined_page,
     about
   ),
   titlePanel(
