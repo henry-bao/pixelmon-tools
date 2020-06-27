@@ -139,10 +139,50 @@ about <- tabPanel(
       p("Make sure you have", strong("Game Time Real"), "as one of the options
         for your map, and use that time to calculate next
         legend spawn."),
+      p(""),
+      tags$img(
+        src = "jmap.png",
+        width = "100%"
+      ),
+      p(""),
+      tags$img(
+        src = "jmap1.png",
+        width = "100%"
+      ),
+      p(""),
+      tags$img(
+        src = "jmap2.png",
+        width = "100%"
+      ),
       p(" "),
       h4("For Time HUD:"),
       p("Make sure your Time HUD format is on", strong("24 hour interval"), "if
         it isn't go to mod config in settings to change it."),
+      p(""),
+      tags$img(
+        src = "timehud.png",
+        width = "100%"
+      ),
+      p(""),
+      tags$img(
+        src = "timehud2.png",
+        width = "100%"
+      ),
+      p(""),
+      tags$img(
+        src = "timehud3.png",
+        width = "100%"
+      ),
+      p(""),
+      tags$img(
+        src = "timehud4.png",
+        width = "100%"
+      ),
+      p(""),
+      tags$img(
+        src = "timehud5.png",
+        width = "100%"
+      ),
       p(" "),
       h2("More informations"),
       p("You can get more informations about legend spawns from the",
