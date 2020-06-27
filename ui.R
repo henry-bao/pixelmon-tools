@@ -94,7 +94,7 @@ third_page <- tabPanel(
   sidebarLayout(
     sidebarPanel(
       width = 4,
-      selectInput("name", "Select a legendary Pokemon name",
+      selectInput("name", "Select a Pokemon name",
                   choices = c("No name selected", unique(df$Pokemon)),
                   selected = "No name selected"),
       p(""),
