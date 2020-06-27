@@ -56,11 +56,11 @@ first_page <- tabPanel(
         src = "time.png",
         width = "60%"
       ),
-      p(" "),
+      p(""),
       span(p("Disclaimer: The calculated spawn time should only be used as a
         reference, calculations might not be accurate due to time conversions
         from IRL to Minecraft"), style = "color:grey"),
-      p(" ")
+      p("")
     )
   )
 )
@@ -97,7 +97,7 @@ third_page <- tabPanel(
       selectInput("name", "Select a legendary Pokemon name",
                   choices = c("No name selected", unique(df$Pokemon)),
                   selected = "No name selected"),
-      p(" "),
+      p(""),
       tags$img(
         src = "sunglass.jpg",
         width = "100%"
@@ -118,16 +118,16 @@ about <- tabPanel(
       width = 3,
       h3("Mod needed"),
       strong("Journey Map"),
-      p(" "),
+      p(""),
       actionButton(inputId = "ab2",
                    label = "Download",
                    class = "btn-primary",
                    onclick = "window.open('https://bit.ly/384GMSx', '_blank')"),
-      p(" "),
+      p(""),
       span(strong("OR"), style = "color: grey"),
-      p(" "),
+      p(""),
       strong("Time HUD"),
-      p(" "),
+      p(""),
       actionButton(inputId = "ab2",
                    label = "Download",
                    class = "btn-primary",
@@ -135,55 +135,62 @@ about <- tabPanel(
     ),
     mainPanel(
       h2("How to use the time calculator"),
-      h4("For Journey Map:"),
-      p("Make sure you have", strong("Game Time Real"), "as one of the options
-        for your map, and use that time to calculate next
-        legend spawn."),
+      tabsetPanel(type = "tabs",
+                  tabPanel("Journey Map",
+                           h3("To set up your Journey Map mod:"),
+                           p("Make sure you have",
+                           strong("Game Time Real"), "as one of the options 
+                           for your map, and use that time to calculate next 
+                           legend spawn."),
+                           p(""),
+                           tags$img(
+                             src = "jmap.png",
+                             width = "100%"
+                           ),
+                           p(""),
+                           tags$img(
+                             src = "jmap1.png",
+                             width = "100%"
+                           ),
+                           p(""),
+                           tags$img(
+                             src = "jmap2.png",
+                             width = "100%"),
+                           p("")
+                          ),
+                  tabPanel("Time HUD",
+                           h3("To set up your Time HUD mod:"),
+                           p("Make sure your Time HUD format is on",
+                           strong("24 hour interval"), "if it isn't go to mod
+                           config in settings to change it."),
+                           p(""),
+                           tags$img(
+                             src = "timehud.png",
+                             width = "100%"
+                           ),
+                           p(""),
+                           tags$img(
+                             src = "timehud2.png",
+                             width = "100%"
+                           ),
+                           p(""),
+                           tags$img(
+                             src = "timehud3.png",
+                             width = "100%"
+                           ),
+                           p(""),
+                           tags$img(
+                             src = "timehud4.png",
+                             width = "100%"
+                           ),
+                           p(""),
+                           tags$img(
+                             src = "timehud5.png",
+                             width = "100%"),
+                           p("")
+                          )
+                  ),
       p(""),
-      tags$img(
-        src = "jmap.png",
-        width = "100%"
-      ),
-      p(""),
-      tags$img(
-        src = "jmap1.png",
-        width = "100%"
-      ),
-      p(""),
-      tags$img(
-        src = "jmap2.png",
-        width = "100%"
-      ),
-      p(" "),
-      h4("For Time HUD:"),
-      p("Make sure your Time HUD format is on", strong("24 hour interval"), "if
-        it isn't go to mod config in settings to change it."),
-      p(""),
-      tags$img(
-        src = "timehud.png",
-        width = "100%"
-      ),
-      p(""),
-      tags$img(
-        src = "timehud2.png",
-        width = "100%"
-      ),
-      p(""),
-      tags$img(
-        src = "timehud3.png",
-        width = "100%"
-      ),
-      p(""),
-      tags$img(
-        src = "timehud4.png",
-        width = "100%"
-      ),
-      p(""),
-      tags$img(
-        src = "timehud5.png",
-        width = "100%"
-      ),
-      p(" "),
       h2("More informations"),
       p("You can get more informations about legend spawns from the",
          tags$a(href = "https://pixelmonmod.com/wiki/", "Pixelmon Wiki"),
@@ -191,13 +198,13 @@ about <- tabPanel(
       h4("Some useful links:"),
       tags$a(href = "https://pixelmonmod.com/wiki/Legendary_Pokemon/",
              "Legendary Pokemon"),
-      p(" "),
+      p(""),
       tags$a(href = "https://pixelmonmod.com/wiki/Spawn_time",
              "Pixelmon spawn times"),
-      p(" "),
+      p(""),
       h2("This website is made by"),
       p(strong("Discord"), ":", "Hackel#1337"),
-      p(" "),
+      p(""),
       span(h6("Legendary table updated on 06/26/2020"), style = "color:grey")
     )
   )
