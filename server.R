@@ -4,6 +4,7 @@ library("dplyr")
 
 # Load scripts
 source("scripts/irl to mc.R")
+source("scripts/irl to mc 2.R")
 
 # Load data frame
 df <- read.csv("data/lgnd_info.csv", stringsAsFactors = FALSE)
@@ -82,5 +83,16 @@ server <- function(input, output, session) {
    }
    output$table2 <- renderTable({
       get_table2(input$name)
+   })
+   
+   get_table3 <- function(input1, input2, input3, input4, input5) {
+     times <- unique(unlist(strsplit(irl_mc2
+                                      (input1, input2, input3, input4, input5),
+                                      ",\\s*")))
+     table3_df <- df %>%
+       filter(Spawn.times %in% times)
+   }
+   output$table3 <- renderTable({
+     get_table3(input$hour, input$min, input$sec, input$mc_hr, input$mc_min)
    })
 }

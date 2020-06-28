@@ -49,13 +49,12 @@ first_page <- tabPanel(
     )),
     mainPanel(
       width = 7,
-      h2("The next spawn time is:"),
+      span(h2("The next spawn time is:"), style = "color: grey"),
       h2(span(textOutput("result"), style = "color: black")),
       p(""),
-      tags$img(
-        src = "time.png",
-        width = "60%"
-      ),
+      span(h2("Possible spawn legendary:"), style = "color:grey"),
+      p(""),
+      tableOutput("table3"),
       p(""),
       span(p("Disclaimer: The calculated spawn time should only be used as a
         reference, calculations might not be accurate due to time conversions
@@ -194,7 +193,12 @@ about <- tabPanel(
                              src = "timehud5.png",
                              width = "100%"),
                            p("")
-                          )
+                          ),
+                  tabPanel("Time Conversion",
+                           h3("Time conversion table:"),
+                           tags$img(
+                             src = "time.png",
+                             width = "50%"))
                   ),
       p(""),
       h2("More informations"),

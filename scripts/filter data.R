@@ -4,7 +4,7 @@ df <- read.csv("../data/lgnd_info.csv", stringsAsFactors = FALSE)
 
 
 test <- unique(unlist(strsplit(df$Biomes, ",\\s*")))
-
+test
 
 observeEvent(
   input$time,
@@ -26,10 +26,19 @@ df <- data.frame(example)
 df$example <- sub(",\\s*", ",\n", df$example)
 df
 
-test1 <- function(){
-  x<-paste("Night")
-  return (x)
-}
 
-night_s <- df %>% 
-  filter(Spawn.times == test1())
+
+test1 <- function(){
+  paste("Night, Dawn/Dusk")
+}
+test1()
+
+times <- unique(unlist(strsplit(test1(), ",\\s*")))
+times
+
+
+t1 <- df %>%
+  filter(Spawn.times %in% times)
+t1
+
+  

@@ -2,7 +2,7 @@
 # library("datetime")
 
 # Time calc
-irl_mc <- function(hour, min, sec, mc_hr, mc_min) {
+irl_mc2 <- function(hour, min, sec, mc_hr, mc_min) {
   ##convert irl min/sec to mc hour/min
   final_mc_hour <- min * 1.2 + sum(hour * 60 * 1.2)
   final_mc_min <- sec * 1.2
@@ -87,34 +87,33 @@ irl_mc <- function(hour, min, sec, mc_hr, mc_min) {
   ##spawn time is in
   time1 <- if (check_time >= 4 + 30 / 60 &&
                check_time <= 5 + 59 / 60) {
-                paste("Dawn, Morning")
-              } else if (check_time >= 6 &&
-                         check_time <= 6 + 18 / 60) {
-                paste("Dawn, Morning, Day")
-              } else if (check_time >= 6 + 19 / 60 &&
-                         check_time <= 12) {
-                paste("Day, Morning")
-              } else if (check_time >= 12 + 1 / 60 &&
-                         check_time <= 18) {
-                paste("Day, Afternoon")
-              } else if (check_time >= 18 + 1 / 60 &&
-                         check_time <= 19 + 21 / 60) {
-                paste("Dusk")
-              } else if (check_time >= 19 + 22 / 60 &&
-                         check_time <= 19 + 48 / 60) {
-                paste("Dusk, Night")
-              } else if (check_time >= 19 + 44 / 60 &&
-                         check_time <= 23 + 59/60) {
-                paste("Night")
-              } else if (check_time >= 0 &&
-                         check_time <= 4 + 29 / 60) {
-                paste("Night")
-              } else {
-                paste("If you see this that means the Minecraft hour you entered
+    paste("Dawn/Dusk, Morning")
+  } else if (check_time >= 6 &&
+             check_time <= 6 + 18 / 60) {
+    paste("Dawn/Dusk, Morning, Day")
+  } else if (check_time >= 6 + 19 / 60 &&
+             check_time <= 12) {
+    paste("Day, Morning")
+  } else if (check_time >= 12 + 1 / 60 &&
+             check_time <= 18) {
+    paste("Day, Afternoon")
+  } else if (check_time >= 18 + 1 / 60 &&
+             check_time <= 19 + 21 / 60) {
+    paste("Dawn/Dusk")
+  } else if (check_time >= 19 + 22 / 60 &&
+             check_time <= 19 + 48 / 60) {
+    paste("Dawn/Dusk, Night")
+  } else if (check_time >= 19 + 44 / 60 &&
+             check_time <= 23 + 59/60) {
+    paste("Night")
+  } else if (check_time >= 0 &&
+             check_time <= 4 + 29 / 60) {
+    paste("Night")
+  } else {
+    paste("If you see this that means the Minecraft hour you entered
                       is larger than 23")
-              }
-
+  }
+  
   ##return calculated values
-  return(paste("[", next_hr,":",
-               round(next_min, digits = 0), "]", ",", time1))
+  return(paste(time1))
 }
