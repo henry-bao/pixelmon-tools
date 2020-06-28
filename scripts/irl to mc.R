@@ -116,5 +116,5 @@ irl_mc <- function(hour, min, sec, mc_hr, mc_min) {
 
   ##return calculated values
   return(paste("[", next_hr,":",
-               round(next_min, digits = 0), "]", ",", time1))
+               round(next_min, digits = 0), "]", time1))
 }
