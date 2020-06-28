@@ -52,7 +52,7 @@ first_page <- tabPanel(
       span(h2("The next spawn time is:"), style = "color: grey"),
       h2(span(textOutput("result"), style = "color: black")),
       p(""),
-      span(h2("Possible spawn legendary:"), style = "color:grey"),
+      span(h2("Possible legendary spawn:"), style = "color:grey"),
       p(""),
       tableOutput("table3"),
       p(""),
