@@ -59,7 +59,6 @@ server <- function(input, output, session) {
          filtered_table <- df %>%
            filter(Spawn.times == input1) %>% 
            arrange(Pokemon)
-         filtered_table
       } else if (input1 == "No time selected") {
          filtered_table <- df %>%
            filter(grepl(paste(input2), Biomes)) %>% 
@@ -81,7 +80,6 @@ server <- function(input, output, session) {
       } else {
          filtered_table <- df %>%
          filter(Pokemon == input)
-         filtered_table
       }
    }
    output$table2 <- renderTable({
