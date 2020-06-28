@@ -13,40 +13,40 @@ first_page <- tabPanel(
       width = 4,
       h2(span("Time until next legend spawn"), style = "color: grey"),
       div(style = "display: inline-block;vertical-align:top; width: 70px;",
-      numericInput(
-        inputId = "hour",
-        label = h4("Hour:"),
-        value = 0
-      )),
+          numericInput(
+            inputId = "hour",
+            label = h4("Hour:"),
+            value = 0
+          )),
       div(style = "display: inline-block;vertical-align:top; width: 5px;"),
       div(style = "display: inline-block;vertical-align:top; width: 70px;",
-      numericInput(
-        inputId = "min",
-        label = h4("Minute:"),
-        value = 0
-      )),
+          numericInput(
+            inputId = "min",
+            label = h4("Minute:"),
+            value = 0
+          )),
       div(style = "display: inline-block;vertical-align:top; width: 5px;"),
       div(style = "display: inline-block;vertical-align:top; width: 70px;",
-      numericInput(
-        inputId = "sec",
-        label = h4("Second:"),
-        value = 0
-      )),
+          numericInput(
+            inputId = "sec",
+            label = h4("Second:"),
+            value = 0
+          )),
       h2(span("Current Minecraft time"), style = "color: grey"),
       div(style = "display: inline-block;vertical-align:top; width: 100px;",
-      numericInput(
-        inputId = "mc_hr",
-        label = h4("Hour(0-23):"),
-        value = 0
-      )),
+          numericInput(
+            inputId = "mc_hr",
+            label = h4("Hour(0-23):"),
+            value = 0
+          )),
       div(style = "display: inline-block;vertical-align:top; width: 5px;"),
       div(style = "display: inline-block;vertical-align:top; width: 100px;",
-      numericInput(
-        inputId = "mc_min",
-        label = h4("Minute:"),
-        value = 0
-      )
-    )),
+          numericInput(
+            inputId = "mc_min",
+            label = h4("Minute:"),
+            value = 0
+          )
+      )),
     mainPanel(
       width = 7,
       span(h2("The next spawn time is:"), style = "color: grey"),
@@ -75,7 +75,7 @@ second_page <- tabPanel(
                   selected = "No time selected"),
       selectInput("biome", "Select a spawn biome",
                   choices = ""
-                  ),
+      ),
       span(p("You can search legend spawn by selecting the time and biome,
              or just time/biome"),
            style = "color : gray"),
@@ -144,7 +144,7 @@ about <- tabPanel(
                   tabPanel("Journey Map",
                            h3("To set up your Journey Map mod:"),
                            p("Make sure you have",
-                           strong("Game Time Real"), "as one of the options 
+                             strong("Game Time Real"), "as one of the options 
                            for your map, and use that time to calculate next 
                            legend spawn."),
                            p(""),
@@ -162,11 +162,11 @@ about <- tabPanel(
                              src = "jmap2.png",
                              width = "100%"),
                            p("")
-                          ),
+                  ),
                   tabPanel("Time HUD",
                            h3("To set up your Time HUD mod:"),
                            p("Make sure your Time HUD format is on",
-                           strong("24 hour interval"), "if it isn't go to mod
+                             strong("24 hour interval"), "if it isn't go to mod
                            config in settings to change it."),
                            p(""),
                            tags$img(
@@ -193,26 +193,26 @@ about <- tabPanel(
                              src = "timehud5.png",
                              width = "100%"),
                            p("")
-                          ),
-                  tabPanel("Time Conversion",
+                  ),
+                  tabPanel("More informations",
                            h3("Time conversion table:"),
                            tags$img(
                              src = "time.png",
-                             width = "50%"))
-                  ),
+                             width = "50%"),
+                           h3("Some useful links:"),
+                           p("You can get more informations about legend spawns from the",
+                             tags$a(href = "https://pixelmonmod.com/wiki/", "Pixelmon Wiki"),
+                             "website."),
+                           tags$a(href = "https://pixelmonmod.com/wiki/Legendary_Pokemon/",
+                                  "Legendary Pokemon"),
+                           p(""),
+                           tags$a(href = "https://pixelmonmod.com/wiki/Spawn_time",
+                                  "Pixelmon spawn times")
+                  )
+                  
+      ),
       p(""),
-      h2("More informations"),
-      p("You can get more informations about legend spawns from the",
-         tags$a(href = "https://pixelmonmod.com/wiki/", "Pixelmon Wiki"),
-        "website."),
-      h4("Some useful links:"),
-      tags$a(href = "https://pixelmonmod.com/wiki/Legendary_Pokemon/",
-             "Legendary Pokemon"),
-      p(""),
-      tags$a(href = "https://pixelmonmod.com/wiki/Spawn_time",
-             "Pixelmon spawn times"),
-      p(""),
-      h2("This website is made by"),
+      h3("This website is made by"),
       p(strong("Discord"), ":", "Hackel#1337"),
       p(""),
       span(h6("Legendary table updated on 06/26/2020"), style = "color:grey")
