@@ -25,3 +25,11 @@ example <- c("a, b", "c", "d", "e, f", "g")
 df <- data.frame(example)
 df$example <- sub(",\\s*", ",\n", df$example)
 df
+
+test1 <- function(){
+  x<-paste("Night")
+  return (x)
+}
+
+night_s <- df %>% 
+  filter(Spawn.times == test1())

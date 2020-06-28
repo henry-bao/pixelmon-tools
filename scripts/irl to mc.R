@@ -78,17 +78,47 @@ irl_mc <- function(hour, min, sec, mc_hr, mc_min) {
     next_hr
   }
   
-  # ##TEST CODE
-  # next_time <- paste0(next_hr, ":", next_min)
-  # get_next_time <- as.time(next_time)
-  # if (next_hr = 4 )
   
+  ##divide final min by 60 to get hour count and add it to final hour
+  check_min <- next_min / 60
+  check_time <- check_min + next_hr
+  
+  ##based on the result above determine which time period the calculated
+  ##spawn time is in
+  time1 <- if (check_time >= 4 + 30 / 60 &&
+               check_time <= 5 + 59 / 60) {
+                paste("Dawn, Morning")
+              } else if (check_time >= 6 &&
+                         check_time <= 6 + 18 / 60) {
+                paste("Dawn, Morning, Day")
+              } else if (check_time >= 6 + 19 / 60 &&
+                         check_time <= 12) {
+                paste("Day, Morning")
+              } else if (check_time >= 12 + 1 / 60 &&
+                         check_time <= 18) {
+                paste("Day, Afternoon")
+              } else if (check_time >= 18 + 1 / 60 &&
+                         check_time <= 19 + 21 / 60) {
+                paste("Dusk")
+              } else if (check_time >= 19 + 22 / 60 &&
+                         check_time <= 19 + 48 / 60) {
+                paste("Dusk, Night")
+              } else if (check_time >= 19 + 44 / 60 &&
+                         check_time <= 23 + 59/60) {
+                paste("Night")
+              } else if (check_time >= 0 &&
+                         check_time <= 4 + 29 / 60) {
+                paste("Night")
+              } else {
+                paste("If you see this that means the Minecraft hour you entered
+                      is larger than 23")
+              }
+
   ##return calculated values
   return(paste("[", next_hr,":",
-               round(next_min, digits = 0), "]"))
+               round(next_min, digits = 0), "]", time1))
 }
 
 
 # # Test
 # irl_mc(0,3,0,0,0)
-# seq(from = as.time("1:2"), to = as.time("1:22"))
