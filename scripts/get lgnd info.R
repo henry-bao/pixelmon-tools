@@ -20,4 +20,4 @@ lgnd_info <- data.frame(table, stringsAsFactors = FALSE)
 lgnd_info <- lgnd_info %>% 
   slice(2:71)
 
-write.csv(lgnd_info, "lgnd_info.csv", row.names = FALSE)
+write.csv(lgnd_info, "lgnd.csv", row.names = FALSE)

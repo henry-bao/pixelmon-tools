@@ -8,6 +8,7 @@ source("scripts/irl to mc 2.R")
 
 # Load data frame
 df <- read.csv("data/lgnd_info.csv", stringsAsFactors = FALSE)
+df2 <- read.csv("data/time.csv", stringsAsFactors = FALSE)
 
 # Define server
 server <- function(input, output, session) {
@@ -96,5 +97,12 @@ server <- function(input, output, session) {
   }
   output$table3 <- renderTable({
     get_table3(input$hour, input$min, input$sec, input$mc_hr, input$mc_min)
+  })
+  
+  get_table4 <- function(df) {
+    df
+  }
+  output$table4 <- renderTable({
+    get_table4(df2)
   })
 }

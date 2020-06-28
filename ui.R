@@ -196,9 +196,7 @@ about <- tabPanel(
                   ),
                   tabPanel("More informations",
                            h3("Time conversion table:"),
-                           tags$img(
-                             src = "time.png",
-                             width = "50%"),
+                           tableOutput("table4"),
                            h3("Some useful links:"),
                            p("You can get more informations about legend spawns from the",
                              tags$a(href = "https://pixelmonmod.com/wiki/", "Pixelmon Wiki"),
