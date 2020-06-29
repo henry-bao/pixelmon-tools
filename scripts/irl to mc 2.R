@@ -1,6 +1,3 @@
-# install.packages("datetime")
-# library("datetime")
-
 # Time calc
 irl_mc2 <- function(hour, min, sec, mc_hr, mc_min) {
   ##convert irl min/sec to mc hour/min
@@ -85,7 +82,7 @@ irl_mc2 <- function(hour, min, sec, mc_hr, mc_min) {
   
   ##based on the result above determine which time period the calculated
   ##spawn time is in
-  time <- if (check_time >= 4 + 30 / 60 &&
+  spawn_time <- if (check_time >= 4 + 30 / 60 &&
                check_time <= 4 + 33 / 60) {
     paste("Dawn/Dusk, Morning, Night")
   } else if (check_time >= 4 + 34 / 60 &&
@@ -107,7 +104,7 @@ irl_mc2 <- function(hour, min, sec, mc_hr, mc_min) {
              check_time <= 19 + 48 / 60) {
     paste("Dawn/Dusk, Night")
   } else if (check_time >= 19 + 49 / 60 &&
-             check_time <= 23 + 59/60) {
+             check_time <= 23 + 59 / 60) {
     paste("Night")
   } else if (check_time >= 0 &&
              check_time <= 4 + 29 / 60) {
@@ -118,5 +115,5 @@ irl_mc2 <- function(hour, min, sec, mc_hr, mc_min) {
   }
   
   ##return calculated values
-  return(paste(time))
+  return(paste(spawn_time))
 }
