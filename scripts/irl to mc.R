@@ -86,8 +86,11 @@ irl_mc <- function(hour, min, sec, mc_hr, mc_min) {
   ##based on the result above determine which time period the calculated
   ##spawn time is in
   time1 <- if (check_time >= 4 + 30 / 60 &&
-               check_time <= 5 + 59 / 60) {
-    paste("Dawn, Morning")
+               check_time <= 4 + 33 / 60) {
+    paste("Dawn/Dusk, Morning, Night")
+  } else if (check_time >= 4 + 34 / 60 &&
+             check_time <= 5 + 59 / 60) {
+    paste("Dawn/Dusk, Morning")
   } else if (check_time >= 6 &&
              check_time <= 6 + 18 / 60) {
     paste("Dawn, Morning, Day")
@@ -103,7 +106,7 @@ irl_mc <- function(hour, min, sec, mc_hr, mc_min) {
   } else if (check_time >= 19 + 22 / 60 &&
              check_time <= 19 + 48 / 60) {
     paste("Dusk, Night")
-  } else if (check_time >= 19 + 44 / 60 &&
+  } else if (check_time >= 19 + 49 / 60 &&
              check_time <= 23 + 59/60) {
     paste("Night")
   } else if (check_time >= 0 &&
