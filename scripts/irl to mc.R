@@ -87,10 +87,10 @@ irl_mc <- function(hour, min, sec, mc_hr, mc_min) {
   ##spawn time is in
   time1 <- if (check_time >= 4 + 30 / 60 &&
                check_time <= 4 + 33 / 60) {
-    paste("Dawn/Dusk, Morning, Night")
+    paste("Dawn, Morning, Night")
   } else if (check_time >= 4 + 34 / 60 &&
              check_time <= 5 + 59 / 60) {
-    paste("Dawn/Dusk, Morning")
+    paste("Dawn, Morning")
   } else if (check_time >= 6 &&
              check_time <= 6 + 18 / 60) {
     paste("Dawn, Morning, Day")
