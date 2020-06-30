@@ -17,11 +17,7 @@ Entei,Mountainous,Day,Land
 Suicune,Beaches,Night,Land
 Lugia,Any,Dusk,Tidal Bell
 Ho-Oh,Any,Dusk,Clear Bell
-Celebi,Forest,Any,"The Ilex Shrine is a shrine that spawns rarely in the Forest biome. The shrine is used in order to spawn the Legendary Celebi or special textures Celebi.
-Right clicking on the Ilex Shrine with the respective type of PokeBalls will spawn the Pokemon and initiate the battle.
-
-GS Ball: Celebi
-Beast Ball: special textures Celebi"
+Celebi,Forest,Any,"Ilex Shrine, GS Ball: Celebi, Beast Ball: special textures Celebi"
 Regirock,Mesas,Afternoon,Underground y=50
 Regice,Freezing,Morning,Underground y=50
 Registeel,Mountainous,Dawn/Dusk,Underground y=50

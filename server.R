@@ -54,8 +54,8 @@ server <- function(input, output, session) {
   
   get_table1 <- function(input1, input2) {
     if (input1 == "No time selected" && input2 == "No biome selected") {
-      df %>% 
-        arrange(Pokemon)
+      paste("You can search legend spawn by selecting the time and biome,
+             or just time/biome")
     } else if (input2 == "No biome selected") {
       filtered_table <- df %>%
         filter(Time == input1) %>% 

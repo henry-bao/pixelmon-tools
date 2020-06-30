@@ -75,10 +75,7 @@ second_page <- tabPanel(
                   selected = "No time selected"),
       selectInput("biome", "Select a spawn biome",
                   choices = ""
-      ),
-      span(p("You can search legend spawn by selecting the time and biome,
-             or just time/biome"),
-           style = "color : gray"),
+      )
     ),
     mainPanel(
       width = 7,
