@@ -50,7 +50,7 @@ first_page <- tabPanel(
     mainPanel(
       width = 7,
       span(h2("The next spawn time is:"), style = "color: grey"),
-      h2(span(textOutput("result"), style = "color: black")),
+      h2(span(textOutput("result"), style = "color: #C8C8C8")),
       p(""),
       span(h2("Possible legendary spawn:"), style = "color:grey"),
       p(""),
@@ -71,7 +71,7 @@ second_page <- tabPanel(
     sidebarPanel(
       width = 4,
       selectInput("time", "Select a spawn time",
-                  choices = c("No time selected", unique(df$Spawn.times)),
+                  choices = c("No time selected", unique(df$Time)),
                   selected = "No time selected"),
       selectInput("biome", "Select a spawn biome",
                   choices = ""
@@ -222,7 +222,7 @@ about <- tabPanel(
 ui <- tagList(
   navbarPage(
     windowTitle = "Pixelmon Tools",
-    theme = shinytheme("united"),
+    theme = shinytheme("slate"),
     div(tags$img(src = "icon.png",
                  style =
                    "margin-top: -9px; padding-right:0px;padding-bottom:20px",

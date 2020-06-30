@@ -22,7 +22,7 @@ server <- function(input, output, session) {
                                         unlist(
                                           strsplit(
                                             df$Biomes[
-                                              df$Spawn.times
+                                              df$Time
                                               == input$time], ",\\s*")))
                           ),
                           selected = "No biome selected")
@@ -58,7 +58,7 @@ server <- function(input, output, session) {
         arrange(Pokemon)
     } else if (input2 == "No biome selected") {
       filtered_table <- df %>%
-        filter(Spawn.times == input1) %>% 
+        filter(Time == input1) %>% 
         arrange(Pokemon)
     } else if (input1 == "No time selected") {
       filtered_table <- df %>%
@@ -66,7 +66,7 @@ server <- function(input, output, session) {
         arrange(Pokemon)
     } else {
       filtered_table <- df %>%
-        filter(Spawn.times == input1 & grepl(paste(input2), Biomes)) %>% 
+        filter(Time == input1 & grepl(paste(input2), Biomes)) %>% 
         arrange(Pokemon)
       
     }
@@ -92,8 +92,8 @@ server <- function(input, output, session) {
                                     (input1, input2, input3, input4, input5),
                                     ",\\s*")))
     table3_df <- df %>%
-      filter(Spawn.times %in% times) %>% 
-      arrange(Spawn.times, Pokemon)
+      filter(Time %in% times) %>% 
+      arrange(Time, Pokemon)
   }
   output$table3 <- renderTable({
     get_table3(input$hour, input$min, input$sec, input$mc_hr, input$mc_min)
