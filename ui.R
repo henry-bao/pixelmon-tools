@@ -210,7 +210,7 @@ about <- tabPanel(
       h3("This website is made by"),
       p(strong("Discord"), ":", "Hackel#1337"),
       p(""),
-      span(h6("Legendary table updated on 06/26/2020"), style = "color:grey")
+      span(h6("Legendary table updated on 07/01/2020"), style = "color:grey")
     )
   )
 )
