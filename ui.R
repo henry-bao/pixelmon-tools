@@ -137,6 +137,8 @@ about <- tabPanel(
     sidebarPanel(
       width = 3,
       h3("Mod needed"),
+      span(p("You only need one of them"), style = "color:grey"),
+      p(""),
       strong("Journey Map"),
       p(""),
       actionButton(inputId = "ab2",
