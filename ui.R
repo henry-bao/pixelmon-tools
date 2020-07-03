@@ -48,18 +48,36 @@ first_page <- tabPanel(
           )
       )),
     mainPanel(
-      width = 7,
-      span(h2("The next spawn time is:"), style = "color: grey"),
-      h2(span(textOutput("result"), style = "color: #C8C8C8")),
-      p(""),
-      span(h2("Possible legendary spawn:"), style = "color:grey"),
-      p(""),
-      tableOutput("table3"),
-      p(""),
-      span(p("Disclaimer: The calculated spawn time should only be used as a
-        reference, calculations might not be accurate due to time conversions
-        from IRL to Minecraft"), style = "color:grey"),
-      p("")
+      tabsetPanel(type = "tabs",
+                  tabPanel("Next Spawn Info",
+                           width = 7,
+                           span(h2("The next spawn time is:"),
+                                style = "color: grey"),
+                           h2(span(textOutput("result"),
+                                   style = "color: #C8C8C8")),
+                           p(""),
+                           span(h2("Possible legendary spawn:"),
+                                style = "color:grey"),
+                           p(""),
+                           tableOutput("table3"),
+                           p(""),
+                           span(p("Disclaimer: The calculated spawn time should
+                           only be used as a reference, calculations might not
+                           be accurate due to time conversions from IRL to
+                                  Minecraft"), style = "color:grey"),
+                           p("")
+                  ),
+                  tabPanel("How to use",
+                           tags$img(
+                             src = "1.png",
+                             width = "100%"
+                           ),
+                           tags$img(
+                             src = "2.png",
+                             width = "100%"
+                           )
+                  )
+      )
     )
   )
 )
@@ -136,7 +154,7 @@ about <- tabPanel(
                    onclick = "window.open('https://bit.ly/3i625aO', '_blank')"),
     ),
     mainPanel(
-      h2("How to use the time calculator"),
+      h2("How to set up the mods"),
       tabsetPanel(type = "tabs",
                   tabPanel("Journey Map",
                            h3("To set up your Journey Map mod:"),
@@ -195,13 +213,14 @@ about <- tabPanel(
                            h3("Time conversion table:"),
                            tableOutput("table4"),
                            h3("Some useful links:"),
-                           p("You can get more informations about legend spawns from the",
-                             tags$a(href = "https://pixelmonmod.com/wiki/", "Pixelmon Wiki"),
-                             "website."),
-                           tags$a(href = "https://pixelmonmod.com/wiki/Legendary_Pokemon/",
+                           p("You can get more informations about legend spawns
+                             from the",
+                             tags$a(href = "https://pixelmonmod.com/wiki/",
+                                    "Pixelmon Wiki"), "website."),
+                           tags$a(href = "https://bit.ly/38fA8J6",
                                   "Legendary Pokemon"),
                            p(""),
-                           tags$a(href = "https://pixelmonmod.com/wiki/Spawn_time",
+                           tags$a(href = "https://bit.ly/2BtKQ2J",
                                   "Pixelmon spawn times")
                   )
                   
