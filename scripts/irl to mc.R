@@ -110,8 +110,8 @@ irl_mc <- function(hour, min, sec, mc_hr, mc_min) {
              check_time <= 4 + 29 / 60) {
     paste("Night")
   } else {
-    paste("If you see this that means the Minecraft hour you entered
-                      is larger than 23")
+    paste("If you see this that means you have entered some information that's
+          invaild")
   }
   
   ##return calculated values
