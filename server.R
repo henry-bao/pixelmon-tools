@@ -88,12 +88,16 @@ server <- function(input, output, session) {
   })
   
   get_table3 <- function(input1, input2, input3, input4, input5) {
-    times <- unique(unlist(strsplit(irl_mc2
-                                    (input1, input2, input3, input4, input5),
-                                    ",\\s*")))
-    table3_df <- df %>%
-      filter(Time %in% times) %>% 
-      arrange(Time, Pokemon)
+    if (input1 == 0 && input2 == 0 && input3 == 0) {
+      paste("Need input form the left section")
+    } else {
+      times <- unique(unlist(strsplit(irl_mc2
+                                      (input1, input2, input3, input4, input5),
+                                      ",\\s*")))
+      table3_df <- df %>%
+        filter(Time %in% times) %>% 
+        arrange(Time, Pokemon)
+    }
   }
   output$table3 <- renderTable({
     get_table3(input$hour, input$min, input$sec, input$mc_hr, input$mc_min)

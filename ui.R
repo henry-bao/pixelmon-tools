@@ -48,6 +48,7 @@ first_page <- tabPanel(
           )
       )),
     mainPanel(
+      width = 7,
       tabsetPanel(type = "tabs",
                   tabPanel("Next Spawn Info",
                            width = 7,
@@ -156,6 +157,7 @@ about <- tabPanel(
                    onclick = "window.open('https://bit.ly/3i625aO', '_blank')"),
     ),
     mainPanel(
+      width = 7,
       h2("How to set up the mods"),
       tabsetPanel(type = "tabs",
                   tabPanel("Journey Map",

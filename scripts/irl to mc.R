@@ -114,7 +114,12 @@ irl_mc <- function(hour, min, sec, mc_hr, mc_min) {
           invaild")
   }
   
+  return_info <- if (hour == 0 && min == 0 && sec == 0) {
+    paste("Please enter information on the left, for instructions about how to
+          enter the information please refer to 'How to use' tab")
+  } else {
+    paste("[", next_hr,":", round(next_min, digits = 0), "]", spawn_time)
+  }
   ##return calculated values
-  return(paste("[", next_hr,":",
-               round(next_min, digits = 0), "]", spawn_time))
+  return(return_info)
 }
