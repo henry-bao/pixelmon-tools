@@ -88,7 +88,8 @@ server <- function(input, output, session) {
   })
   
   get_table3 <- function(input1, input2, input3, input4, input5) {
-    if (input1 == 0 && input2 == 0 && input3 == 0) {
+    if (input1 == 0 && input2 == 0 && input3 == 0 && input4 == 0
+        && input5 == 0) {
       paste("Need input form the left section")
     } else {
       times <- unique(unlist(strsplit(irl_mc2
