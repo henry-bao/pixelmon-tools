@@ -1,7 +1,7 @@
 # Time calc
-irl_mc <- function(hour, min, sec, mc_hr, mc_min) {
+irl_mc <- function(min, sec, mc_hr, mc_min) {
   ##convert irl min/sec to mc hour/min
-  final_mc_hour <- min * 1.2 + sum(hour * 60 * 1.2)
+  final_mc_hour <- min * 1.2
   final_mc_min <- sec * 1.2
   
   
@@ -107,14 +107,14 @@ irl_mc <- function(hour, min, sec, mc_hr, mc_min) {
              check_time <= 23 + 59 / 60) {
     paste("Night")
   } else if (check_time >= 0 &&
-             check_time <= 4 + 29 / 60) {
+             check_time < 4 + 30 / 60) {
     paste("Night")
   } else {
     paste("If you see this that means you have entered some information that's
           invaild")
   }
   
-  return_info <- if (hour == 0 && min == 0 && sec == 0 && mc_hr == 0
+  return_info <- if (min == 0 && sec == 0 && mc_hr == 0
                      && mc_min == 0) {
     paste("Please enter information on the left, for instructions on how to
           enter the information please refer to 'How to use' tab")

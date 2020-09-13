@@ -1,7 +1,7 @@
 # Time calc
-irl_mc2 <- function(hour, min, sec, mc_hr, mc_min) {
+irl_mc2 <- function(min, sec, mc_hr, mc_min) {
   ##convert irl min/sec to mc hour/min
-  final_mc_hour <- min * 1.2 + sum(hour * 60 * 1.2)
+  final_mc_hour <- min * 1.2
   final_mc_min <- sec * 1.2
   
   
@@ -107,7 +107,7 @@ irl_mc2 <- function(hour, min, sec, mc_hr, mc_min) {
              check_time <= 23 + 59 / 60) {
     paste("Night")
   } else if (check_time >= 0 &&
-             check_time <= 4 + 29 / 60) {
+             check_time < 4 + 30 / 60) {
     paste("Night")
   } else {
     paste("If you see this that means the Minecraft hour you entered

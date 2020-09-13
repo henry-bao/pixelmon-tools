@@ -12,21 +12,14 @@ first_page <- tabPanel(
     sidebarPanel(
       width = 4,
       h2(span("Time until next legend spawn"), style = "color: grey"),
-      div(style = "display: inline-block;vertical-align:top; width: 70px;",
-          numericInput(
-            inputId = "hour",
-            label = h4("Hour:"),
-            value = 0
-          )),
-      div(style = "display: inline-block;vertical-align:top; width: 5px;"),
-      div(style = "display: inline-block;vertical-align:top; width: 70px;",
+      div(style = "display: inline-block;vertical-align:top; width: 100px;",
           numericInput(
             inputId = "min",
             label = h4("Minute:"),
             value = 0
           )),
       div(style = "display: inline-block;vertical-align:top; width: 5px;"),
-      div(style = "display: inline-block;vertical-align:top; width: 70px;",
+      div(style = "display: inline-block;vertical-align:top; width: 100px;",
           numericInput(
             inputId = "sec",
             label = h4("Second:"),
